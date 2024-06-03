@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loans</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book.html">Books</a></li>
+            <li><a href="loans.html">Loans</a></li>
+            <li><a href="users.html">Users</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <h1>Loans</h1>
+        <table id="loans-table">
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Book ID</th>
+                    <th>Loan ID</th>
+                    <th>Loan Date</th>
+                    <th>Return Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="loans-list"></tbody>
+        </table>
+        
+        <br><br>
+        <h2>Add a New Loan</h2>
+        <form id="add-loan-form">
+            <input type="hidden" id="loan-user-id">
+            
+            <label for="user-id">User ID:</label>
+            <input type="number" id="user-id" name="user-id">
+            
+            <label for="book-id">Book ID:</label>
+            <input type="number" id="book-id" name="book-id" required>
+            
+            <label for="loan-date">Loan Date:</label>
+            <input type="date" id="loan-date" name="loan-date" required>
+            
+            <label for="return-date">Return Date:</label>
+            <input type="date" id="return-date" name="return-date" required>
+            
+            <button type="submit">Add Loan</button>
+        </form>
+        <br><br>
+        
+        <h2>Edit Loan</h2>
+        <form id="edit-loan-form" style="display: none;">
+            <input type="hidden" id="edit-loan-id">
+        
+            <label for="edit-book-id">Book ID:</label>
+            <input type="number" id="edit-book-id" name="edit-book-id" required>
+            
+            <label for="edit-user-id">User ID:</label>
+            <input type="number" id="edit-user-id" name="edit-user-id" required>
+            
+            <label for="edit-loan-date">Loan Date:</label>
+            <input type="text" id="edit-loan-date" name="edit-loan-date" required>
+            
+            <label for="edit-return-date">Return Date:</label>
+            <input type="text" id="edit-return-date" name="edit-return-date" required>
+            
+            <button type="submit">Save Changes</button>
+        </form>
+        
+    </main>
+    <script src="../js/loans.js"></script>
+</body>
+</html>
